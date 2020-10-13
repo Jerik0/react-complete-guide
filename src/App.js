@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import React, { useState } from 'react'; <<< *THIS HOOK IS THE WAY YOU ADD FUNCTIONAL STATE*
 import './App.css';
 import Person from './Person/Person' // <<< This needs to be UPPERCASE even though the Person.js is exported with lowercase.
 
@@ -40,5 +41,28 @@ class App extends Component {
     // React.createElement('div', {className: 'App'}, React.createElement('h1', null, "Hi, I'm a React App.")) <<< what the above JSX gets compiled to in JS. 
   }
 }
+
+/** FUNCTIONAL STATE:
+const App = props => {
+
+  const [peopleState, setPeopleState] = useState({
+    people:  [
+      { name: "Jonathan", age: 34 },
+      { name: "Shelby", age: 28 },
+      { name: "Mike", age: 32 },
+    ],
+    otherState: 'some other value'
+  });
+  return (
+      <div className="App">
+        <h1>Hi, I'm a React App.</h1>
+        <Person name={peopleState[0].name} age={peopleState[0].age} />
+        <Person name={peopleState[1].name} age={peopleState[1].age}>My Hobbies: Vanderpump Rules</Person>
+        <Person name={peopleState[2].name} age={peopleState[2].age} />
+        <button onClick={this.switchNameHandler}>Switch Name</button>
+      </div>
+    );
+}
+ */
 
 export default App;
