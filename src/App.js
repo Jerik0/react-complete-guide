@@ -7,9 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi, I'm a React App.</h1>
-        <Person />
-        <Person />
-        <Person />
+        <Person name="Jonathan" age="34"/>
+        <Person name="Shelby" age="28">My Hobbies: Vanderpump Rules</Person>
+        <Person name="Mike" age="32" />
       </div>
    // <div></div> <<< this is bad form, though loosely and technically allowed, we should only have one root element.
     );
