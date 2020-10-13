@@ -7,8 +7,8 @@ const person = props => {
     <div>
       <p>I'm {props.name}, and I am {props.age} years old.</p>
       <p>{props.children}</p>
-      <button>Switch Name</button>
     </div>
+    // onClick uses a CAPITAL C instead of lowercase because it is JSX.
   // props.children refers to ANYTHING between the opening and closing tag of the component (including complex JS).
   )
 }

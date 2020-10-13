@@ -12,6 +12,11 @@ class App extends Component {
     ]
   }
 
+  // 'handler' is used to show that you are not calling this function but that it is used to handle events.
+  switchNameHandler = () => {
+    console.log('was clicked');
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,6 +24,7 @@ class App extends Component {
         <Person name={this.state.people[0].name} age={this.state.people[0].age} />
         <Person name={this.state.people[1].name} age={this.state.people[1].age}>My Hobbies: Vanderpump Rules</Person>
         <Person name={this.state.people[2].name} age={this.state.people[2].age} />
+        <button onClick={this.switchNameHandler}>Switch Name</button>
       </div>
    // <div></div> <<< this is bad form, though loosely and technically allowed, we should only have one root element.
     );
