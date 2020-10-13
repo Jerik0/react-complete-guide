@@ -9,12 +9,20 @@ class App extends Component {
       { name: "Jonathan", age: 34 },
       { name: "Shelby", age: 28 },
       { name: "Mike", age: 32 },
-    ]
+    ],
+    otherState: 'some other value'
   }
 
   // 'handler' is used to show that you are not calling this function but that it is used to handle events.
   switchNameHandler = () => {
-    console.log('was clicked');
+    // console.log('was clicked');
+    // this.state.people[0].name = 'Jon';  <<< DO NOT DO THIS, React will not recognize state change like this.
+    this.setState({
+      people: [
+        { name: "Jonathan", age: 34 },
+        { name: "Shelby", age: 28 },
+        { name: "Mike", age: 33 },
+    ]});
   }
 
   render() {
