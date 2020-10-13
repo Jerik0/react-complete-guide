@@ -8,6 +8,8 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I'm a React App.</h1>
         <Person />
+        <Person />
+        <Person />
       </div>
    // <div></div> <<< this is bad form, though loosely and technically allowed, we should only have one root element.
     );
